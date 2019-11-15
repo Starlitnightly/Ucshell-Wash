@@ -1,0 +1,117 @@
+
+<!doctype html>
+<html>
+<head>
+
+
+
+	<title>贝壳-洗衣</title>
+
+
+	<meta charset='utf-8'/>
+	<meta http-equiv='Content-Language' content='zh'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1'/>
+	<meta name='theme-color' content='#ffffff'>
+	<link rel="icon" href='/static/images/logo.png'>
+
+
+	<!-- CSS -->
+	<link rel='stylesheet' href='https://www.starbucks.com.cn/assets/styles.css?201911111647'>
+</head>
+
+<body class='lang-zh page-stores' ontouchstart=''>
+
+	<div id='app-view-wrapper'>
+		<!-- Navigation panel -->
+		<nav id='nav'>
+			<div class='container'>
+
+				<div class='body' style="top:14%">
+					<div id="react-store-locator-nav-secondary">
+						<div data-reactroot="" class="StoreLocatoreContainer">
+							<nav class="container" >
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+										<div class="navbar-header">
+											<a class="navbar-brand" href="#">
+
+												<div class="col-xs-8">
+													<h1>贝壳-洗衣</h1>
+													<small>当前空机器：{{kong}}</small>
+												</div>
+												
+
+											</a>
+										</div>
+										<div>
+
+										</div>
+									</div>
+								</nav>
+								<ul class="list" id="location-results">
+									{% for m,n in Onlytime.items %}
+									<li class="">
+										
+										<!-- react-text: 59 -->No：{{m}}<!-- /react-text -->
+										{% if n != '0' %}
+										<img class="delivery" src="/static/images/hong.jpg">
+										<small>一层</small>
+										<span class="distance">剩余运行时间：{{n}}min</span>
+										{% else %}
+										<img class="delivery" src="/static/images/lan.jpg">
+										<small>一层</small>
+										<span class="distance">剩余运行时间：{{n}}min</span>
+										{% endif %}
+
+									</li>
+									{% endfor %}
+								</ul>
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+	<!-- Navigation bottom mobile -->
+	<div class='primary-mobile'>
+		<ul class='flex justify-around logging-in-element'>
+			<li class='home' id='home-mobile'>
+				<a href='/one/'>
+					<span class='icons'>
+						<img src='/static/images/icon-stores.svg'/>
+						<img src='/static/images/icon-stores-active.svg' class='active'/>
+					</span>
+					<div id='home-mobile'>一斋</div>
+				</a>
+			</li>
+
+			<li class='stores' id='stores-mobile'>
+				<a href='/home/'>
+					<span class='icons'>
+						<img src='/static/images/icon-home.svg'/>
+						<img src='/static/images/icon-home-active.svg' class='active'/>
+					</span>
+					<div id='stores-mobile'>主页</div>
+				</a>
+			</li>
+			<li class='stores' id='stores-mobile'>
+				<a href='/nine/'  class="active">
+					<span class='icons'>
+						<img src='/static/images/icon-stores.svg'/>
+						<img src='/static/images/icon-stores-active.svg' class='active'/>
+					</span>
+					<div id='stores-mobile'>九斋</div>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+
+
+
+
+</body>
+</html>
